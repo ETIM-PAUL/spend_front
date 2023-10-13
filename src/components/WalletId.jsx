@@ -1,8 +1,12 @@
 import Image from 'next/image'
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { toast } from "react-toastify";
 import Auth from "@/app/auth/Auth";
 import copy from "copy-to-clipboard";
+=======
+import React from 'react'
+>>>>>>> 1935b7b (merge changes)
 
 const WalletId = ({ type }) => {
   const { address } = Auth();

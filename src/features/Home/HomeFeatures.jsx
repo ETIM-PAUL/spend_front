@@ -8,7 +8,7 @@ export default function HomeFeatures() {
   return (
 
     <Layout>
-      <div className='pt-20 pb-5'>
+      <div className='pt-16 pb-5'>
         <div className='md:flex'>
           <div>
             <div className="flex flex-wrap justify-center gap-10 text-white">

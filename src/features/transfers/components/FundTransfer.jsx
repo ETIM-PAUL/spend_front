@@ -1,6 +1,6 @@
 /** @format */
 "use client"
-import Auth from "@/app/auth/Auth";
+import Auth from "@/pages/auth/Auth";
 import React from "react";
 import copy from "copy-to-clipboard";
 import { toast } from "react-toastify";
@@ -10,7 +10,10 @@ export default function FundTransfer() {
   const { address } = Auth();
 
   const copyToClipboard = () => {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1935b7b (merge changes)
     let copyText = address;
     let isCopy = copy(copyText);
 

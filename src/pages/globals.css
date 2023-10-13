@@ -4,14 +4,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Geostar&family=Montserrat&family=Orbitron:wght@400;600&family=Space+Grotesk&family=Space+Mono&display=swap');
+=======
+>>>>>>> 1935b7b (merge changes)
 
 .mono {
   font-family: 'Space Mono', monospace;
 }
+<<<<<<< HEAD
 
 .fund_bg {
   background: linear-gradient(180deg, #69B5FF 0%, #D2E9FF 100%);
+=======
+.funda_bg{
+
+  background: linear-gradient(180deg, #69B5FF 0%, #D2E9FF 100%);
+
+  
+
+>>>>>>> 1935b7b (merge changes)
 }
 
 .mono {
@@ -35,15 +47,22 @@ main {
   font-family: 'Grotesk', monospace;
 }
 
+<<<<<<< HEAD
 .orbitron_font {
   font-family: 'Orbitron', monospace;
 }
 
+=======
+>>>>>>> 1935b7b (merge changes)
 .mono_font {
   font-family: 'Space Mono', monospace;
 }
 
 .logo {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1935b7b (merge changes)
   font-family: 'Orbitron', sans-serif;
 }
 
@@ -70,6 +89,7 @@ main {
   background: linear-gradient(180deg, rgba(15, 72, 128, 0.30) 0%, rgba(210, 233, 255, 0.70) 100%);
 }
 
+<<<<<<< HEAD
 .fund_from_card {
   border-radius: 16px;
   background: linear-gradient(180deg, #69B5FF 0%, #D2E9FF 100%);
@@ -87,6 +107,8 @@ main {
   background: var(--Light, #FEFEFE);
 }
 
+=======
+>>>>>>> 1935b7b (merge changes)
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
