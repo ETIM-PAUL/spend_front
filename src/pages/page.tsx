@@ -1,6 +1,6 @@
 'use client'
 import { AiOutlineClose } from 'react-icons/ai'
-import Auth from '@/app/auth/Auth'
+import Auth from '@/pages/auth/Auth'
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
