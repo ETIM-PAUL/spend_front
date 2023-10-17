@@ -5,8 +5,7 @@ import Layout from '@/components/Layout'
 export default function page() {
   return (
     <Layout>
-
-      <TransfersFeatures/>
+      <TransfersFeatures />
     </Layout>
   )
 }

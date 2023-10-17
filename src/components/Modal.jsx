@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import Auth from "@/app/auth/Auth";
+import Auth from "@/pages/auth/Auth";
 import { coins } from '@/utils';
 import Image from 'next/image';
 

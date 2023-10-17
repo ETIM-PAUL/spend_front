@@ -4,7 +4,6 @@ import React from 'react'
 import Layout from '@/components/Layout'
 import WalletId from "@/components/WalletId"
 import { PiArrowLeftBold } from 'react-icons/pi'
-import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 

@@ -1,19 +1,15 @@
 /** @format */
 "use client"
-import Auth from "@/pages/auth/Auth";
 import React from "react";
 import copy from "copy-to-clipboard";
 import { toast } from "react-toastify";
 import Link from "next/link";
+import { useAppContext } from "../../../pages/auth/Context"
 
 export default function FundTransfer() {
-  const { address } = Auth();
+  const { address } = useAppContext();
 
   const copyToClipboard = () => {
-<<<<<<< HEAD
-
-=======
->>>>>>> 1935b7b (merge changes)
     let copyText = address;
     let isCopy = copy(copyText);
 
@@ -24,7 +20,7 @@ export default function FundTransfer() {
   return (
     <main>
       <section className="flex justify-between mt-20 ">
-        <Link href="/transfers/sendfund" className="w-[49%] funda_bg rounded-2xl cursor-pointer">
+        <Link href="/transfers/sendfund" className="w-[49%] fund_bg rounded-2xl cursor-pointer">
           <div className="w-[90%] mx-auto py-3 flex justify-between items-center">
             <div className="">
 
@@ -36,7 +32,7 @@ export default function FundTransfer() {
             </div>
           </div>
         </Link>
-        <Link href="/transfers/betweenacct" className="w-[49%] funda_bg rounded-2xl cursor-pointer">
+        <Link href="/transfers/betweenacct" className="w-[49%] fund_bg rounded-2xl cursor-pointer">
           <div className="w-[90%] mx-auto py-3 flex justify-between items-center">
             <div className="">
 

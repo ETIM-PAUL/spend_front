@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export default function SavingsClub() {
   const router = useRouter()
-  // const [savingLive, setSavingLive] = useState(true)
+  const [savingLive, setSavingLive] = useState(true)
 
   return (
     <Layout>
@@ -19,11 +19,11 @@ export default function SavingsClub() {
             className="font-bold cursor-pointer mt-2"
             onClick={() => router.back()}
           />
-          <span className='tracking-[0.08px] text-3xl'>Personal Savings</span>
+          <span className='tracking-[0.08px] text-3xl'>Savings Club</span>
         </div>
-
         <div className='mt-8 sm:mt-10 mb-10'>
-          <div href="/savings/club" className="flex items-center savings_club p-6 hover:cursor-pointer">
+          <div href="/savings/club" className="flex items-center savings_club p-6">
+
             <div className='grid w-full'>
               <div className='w-14 h-14 p-1'>
                 <Image
@@ -41,7 +41,7 @@ export default function SavingsClub() {
           </div>
         </div>
 
-        {/* Transaction History */}
+        {/* Trending History */}
         <div className='mt-8 sm:my-10'>
           <div className='flex justify-between items-center'>
             <span className='font-bold text-lg'>Trending Savings Club</span>
@@ -50,21 +50,74 @@ export default function SavingsClub() {
               <span className=''>&#62;</span>
             </Link>
           </div>
-          <div className="flex flex-wrap justify-center gap-10 mt-8 text-white">
-            {clubs.map((card, index) => (
-              <div key={index} className='w-full rounded-[8px] border-t md:max-w-[300px]' >
-                <div className='w-full h-[180px] flex justify-center' style={{ backgroundColor: card.bg_col }} >
+          <div className='flex justify-between'>
+            <div className="flex flex-wrap justify-center gap-10 mt-8 text-white w-full ">
+              <div className='w-full rounded-[8px] border-t md:max-w-[300px]' >
+                <div className='w-full h-[180px] flex justify-center' style={{ backgroundColor: "rgba(143, 231, 108, 0.50)" }}>
                   <Image
-                    src={card?.imagePath}
+                    src="/savings/dollar_coins.svg"
                     alt={""}
                     className="w-full"
                     width={120}
                     height={120}
                   />
                 </div>
-
                 <div className='text-black grid mt-1'>
-                  <span className='font-bold text-lg'>{card.name}</span>
+                  <span className='font-bold text-lg'>Rent</span>
+                  <div className="w-full bg-[#D9D9D9] h-[3px]">
+                    <div
+                      className="h-full bg-[#0F4880]"
+                      role="progressbar"
+                      style={{ width: `${50}%` }}
+                    ></div>
+                  </div>
+                  <div className='space-x-2'>
+                    <span className='text-[14px] font-bold'>102</span>
+                    <span className='text-[12px]'>members</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-wrap justify-center gap-10 mt-8 text-white w-full ">
+              <div className='w-full rounded-[8px] border-t md:max-w-[300px]' >
+                <div className='w-full h-[180px] flex justify-center' style={{ backgroundColor: "rgba(224, 207, 186, 0.50)" }}>
+                  <Image
+                    src="/savings/hand_sack.svg"
+                    alt={""}
+                    className="w-full"
+                    width={120}
+                    height={120}
+                  />
+                </div>
+                <div className='text-black grid mt-1'>
+                  <span className='font-bold text-lg'>New Business</span>
+                  <div className="w-full bg-[#D9D9D9] h-[3px]">
+                    <div
+                      className="h-full bg-[#0F4880]"
+                      role="progressbar"
+                      style={{ width: `${40}%` }}
+                    ></div>
+                  </div>
+                  <div className='space-x-2'>
+                    <span className='text-[14px] font-bold'>102</span>
+                    <span className='text-[12px]'>members</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-wrap justify-center gap-10 mt-8 text-white w-full ">
+              <div className='w-full rounded-[8px] border-t md:max-w-[300px]' >
+                <div className='w-full h-[180px] flex justify-center' style={{ backgroundColor: "rgba(150, 149, 236, 0.50)" }}>
+                  <Image
+                    src="/savings/wallet_saving.svg"
+                    alt={""}
+                    className="w-full"
+                    width={120}
+                    height={120}
+                  />
+                </div>
+                <div className='text-black grid mt-1'>
+                  <span className='font-bold text-lg'>Holiday in UK</span>
                   <div className="w-full bg-[#D9D9D9] h-[3px]">
                     <div
                       className="h-full bg-[#0F4880]"
@@ -73,41 +126,42 @@ export default function SavingsClub() {
                     ></div>
                   </div>
                   <div className='space-x-2'>
-                    <span className='text-[14px] font-bold'>{card.members}</span>
+                    <span className='text-[14px] font-bold'>102</span>
                     <span className='text-[12px]'>members</span>
                   </div>
                 </div>
               </div>
-            ))}
+            </div>
+
           </div>
         </div>
-        {/* 
+
         <div className="flex justify-center w-[50%] mx-auto">
           <div className='text-black grid mt-1 w-full'>
-            <span className='font-bold text-lg pb-1 hover:cursor-pointer block text-center'>Live</span>
+            <span onClick={() => setSavingLive(true)} className='font-bold text-lg pb-1 hover:cursor-pointer block text-center'>Live</span>
             <div className="w-full bg-[#D9D9D9] h-[3px]">
               <div
                 className="h-full bg-[#0F4880]"
                 role="progressbar"
-                style={{ width: `100%` }}
+                style={{ width: `${savingLive ? "100%" : "0"}` }}
               ></div>
             </div>
           </div>
           <div className='text-black grid mt-1 w-full'>
-            <span className='font-bold text-lg pb-1 hover:cursor-pointer block text-center'>Completed</span>
+            <span onClick={() => setSavingLive(false)} className='font-bold text-lg pb-1 hover:cursor-pointer block text-center'>Completed</span>
             <div className="w-full bg-[#D9D9D9] h-[3px]">
               <div
                 className="h-full bg-[#0F4880]"
                 role="progressbar"
-                style={{ width: `0%` }}
+                style={{ width: `${!savingLive ? "100%" : "0"}` }}
               ></div>
             </div>
           </div>
-        </div> */}
+        </div>
 
-        {/* <div className='mt-8 block text-center'>
+        <div className='mt-8 block text-center'>
           {!savingLive ?
-            <span className='w-full md:w-[100px]'>
+            <span className='w-full block mx-auto md:w-2xl'>
               You have <span className='font-bold'>Not Completed</span> any savings club yet. It will show here once you are done
             </span>
             :
@@ -115,7 +169,7 @@ export default function SavingsClub() {
               You have <span className='font-bold'>No Ongoing</span> savings
             </span>
           }
-        </div> */}
+        </div>
 
         <div className='flex justify-center items-center text-[#0F4880] gap-2 mt-4'>
           <span className='tracking-[0.08px] text-lg grotesk_font'>Create a Savings Club</span>

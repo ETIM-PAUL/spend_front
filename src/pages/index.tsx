@@ -1,11 +1,11 @@
 'use client'
 import { AiOutlineClose } from 'react-icons/ai'
-import Auth from '@/pages/auth/Auth'
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { useAppContext } from './auth/Context';
 
-export default function Home() {
-  const { createWallet, isLoading, isConnected } = Auth();
+const Home = () => {
+  const { createWallet, isLoading, isConnected } = useAppContext();
   const router = useRouter();
 
   useEffect(() => {
@@ -14,7 +14,7 @@ export default function Home() {
     }
   }, [isConnected])
   return (
-    <main className="">
+    <div className="">
       <section className="w-[50%] h-[400px] bg-[#D2E9FF] mx-auto rounded-[40px] mt-[150px]">
         <div className="">
           <div className="w-[90%] mx-auto flex justify-end pt-5">
@@ -35,6 +35,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }
+
+export default Home;

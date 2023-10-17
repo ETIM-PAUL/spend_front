@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { toast } from "react-toastify";
-import Auth from "@/app/auth/Auth";
 import copy from "copy-to-clipboard";
+import { useAppContext } from '@/pages/auth/Context';
 
 const WalletId = ({ type }) => {
-  const { address } = Auth();
+  const { address } = useAppContext();
   const [copied, setCopied] = useState(false)
 
   const copyToClipboard = () => {
