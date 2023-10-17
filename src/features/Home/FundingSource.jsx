@@ -4,26 +4,18 @@ import React from 'react'
 import Layout from '@/components/Layout'
 import WalletId from "@/components/WalletId"
 import { PiArrowLeftBold } from 'react-icons/pi'
-<<<<<<< HEAD
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 
-=======
->>>>>>> 1935b7b (merge changes)
 
 const FundingSource = () => {
   const router = useRouter()
 
   return (
     <Layout>
-<<<<<<< HEAD
       <div className='pt-20 pb-5'>
         <div className='flex gap-6'>
-=======
-      <div className='pt-16 pb-5'>
-        <div className='flex gap-6 w-'>
->>>>>>> 1935b7b (merge changes)
           <PiArrowLeftBold
             size={24}
             className="font-bold cursor-pointer mt-2"
