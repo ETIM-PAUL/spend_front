@@ -12,7 +12,7 @@ export default function SavingsClub() {
 
   return (
     <Layout>
-      <div className='pt-20 pb-5'>
+      <div className='py-20'>
         <div className='flex gap-6'>
           <PiArrowLeftBold
             size={24}

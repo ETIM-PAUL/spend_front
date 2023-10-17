@@ -2,7 +2,7 @@ import React from 'react'
 
 const CreateSavings = () => {
   return (
-    <div>CreateSavings</div>
+    <Layout>CreateSavings</Layout>
   )
 }
 
